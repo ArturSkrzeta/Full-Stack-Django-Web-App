@@ -1,11 +1,11 @@
-<p>First entry site look:</p>
+<p>First entry site look</p>
 <img src="images/pr_system.JPG">
 
 <p>All open requests are stored in the Home tab</p>
 <img src="images/pr_home.JPG">
 
 <p>When PR closed it goes to the Archive tab</p>
-<img src="images/pr_arhive.JPG">
+<img src="images/pr_archive.JPG">
 
 <p>Each buyer can access its PR and udpdate/delet it.</p>
 <img src="images/pr_update.JPG">
