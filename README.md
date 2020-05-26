@@ -7,7 +7,7 @@
 <p>When PR closed it goes to the Archive tab</p>
 <img src="images/pr_archive.JPG">
 
-<p>Each buyer can enter a site with ist own PRs by clickin on the name.</p>
+<p>Each buyer can enter a site with ist own PRs by clicking on the name.</p>
 <img src="images/pr_buyer_view.JPG">
 
 <p>Each buyer can access its PR and udpdate/delete it.</p>
