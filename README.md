@@ -7,7 +7,7 @@
 <p>When PR closed it goes to the Archive tab</p>
 <img src="images/pr_archive.JPG">
 
-<p>Each buyer can access its PR and udpdate/delet it.</p>
+<p>Each buyer can access its PR and udpdate/delete it.</p>
 <img src="images/pr_update.JPG">
 
 <p>PR number is restricted to be unique in db</p>
