@@ -1,0 +1,9 @@
+{% extends "prs/layout.html" %}
+{% block content %}
+    <legend class="mb-3">You have been logged out.</legend>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a href="{% url 'login' %}">Log In Again</a>
+        </small>
+    </div>
+{% endblock content %}
