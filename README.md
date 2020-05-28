@@ -7,11 +7,11 @@
 <p>When Purchase Request closed, it goes to the Archive tab.</p>
 <img src="images/pr_archive.JPG">
 
-<p>Each buyer can enter a site with ist own PRs by clicking on the name.</p>
+<p>Each buyer can enter a site with ist own Purchase Requests by clicking on the name.</p>
 <img src="images/pr_buyer_view.JPG">
 
-<p>Each buyer can access its PR and udpdate/delete it.</p>
+<p>Each buyer can access its Purchase Requests and udpdate/delete them.</p>
 <img src="images/pr_update.JPG">
 
-<p>PR number is restricted to be unique in db.</p>
+<p>Purchase Request number is restricted to be unique in db.</p>
 <img src="images/pr_new.JPG">
