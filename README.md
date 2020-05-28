@@ -4,7 +4,7 @@
 <p>All open requests are stored in the Home tab.</p>
 <img src="images/pr_home.JPG">
 
-<p>When PR closed it goes to the Archive tab.</p>
+<p>When Purchase Request closed, it goes to the Archive tab.</p>
 <img src="images/pr_archive.JPG">
 
 <p>Each buyer can enter a site with ist own PRs by clicking on the name.</p>
