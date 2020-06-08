@@ -1,3 +1,5 @@
+<h2>Django Full Stack Web Application</h2>
+<h3>Demo</h3>
 <p>First entry site look.</p>
 <img src="images/pr_system.JPG">
 
