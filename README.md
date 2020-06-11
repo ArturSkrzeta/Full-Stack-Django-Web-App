@@ -1,6 +1,6 @@
 <h2>Django Full Stack Web Application</h2>
 <h3>Intro</h3>
-<p>The application of rquests managing application raised from the need of ecsaping shared excel files where the risk of getting things messy is very very high. That affects the data quality which has enormous imapct on further reporting and analysis.</p>
+<p>The application for requests/tickets/tasks management raised from the need of ecsaping from shared excel files where the risk of getting things messy is very very high. That affects the data quality which has enormous imapct on further reporting and analysis.</p>
 <h3>Demo</h3>
 <p>First entry site look.</p>
 <img src="images/pr_system.JPG">
