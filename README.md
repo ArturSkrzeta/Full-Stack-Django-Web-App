@@ -5,7 +5,7 @@
 <ul>
  <li>Object oriented database.</li>
  <li>Post forms data validation.</li>
- <li>User register/login system.</li>
+ <li>User register/login/logout system.</li>
  <li>User profile panel for info updates.</li>
  <li>Access security system.</li>
 </ul>
