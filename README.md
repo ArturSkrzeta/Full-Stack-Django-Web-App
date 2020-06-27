@@ -6,7 +6,7 @@
  <li>Object oriented database.</li>
  <li>Post forms data validation.</li>
  <li>User register/login system.</li>
- <li>User profil panel for info updates.</li>
+ <li>User profile panel for info updates.</li>
 </ul>
 <img src="images/django.gif">
 <h3>Demo</h3>
