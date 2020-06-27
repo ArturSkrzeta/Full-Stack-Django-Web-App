@@ -4,6 +4,8 @@
 <ul>
  <li>Object oriented database.</li>
  <li>Post forms data validation.</li>
+ <li>User register/login system.</li>
+ <li></li>
 </ul>
 <img src="images/django.gif">
 <h3>Demo</h3>
