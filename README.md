@@ -7,6 +7,7 @@
  <li>Post forms data validation.</li>
  <li>User register/login system.</li>
  <li>User profile panel for info updates.</li>
+ <li>Access security system.</li>
 </ul>
 <img src="images/django.gif">
 <h3>Demo</h3>
