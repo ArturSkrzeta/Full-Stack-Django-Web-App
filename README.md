@@ -3,7 +3,7 @@
 <p>The application for requests/tickets/tasks management raised from the need of ecsaping from shared excel files where the risk of getting things messy is very very high. That affects the data quality which has enormous imapct on further reporting and the analysis.</p>
 <ul>
  <li>Object oriented database.</li>
- <li>Post Forms data validation.</li>
+ <li>Post forms data validation.</li>
 </ul>
 <img src="images/django.gif">
 <h3>Demo</h3>
