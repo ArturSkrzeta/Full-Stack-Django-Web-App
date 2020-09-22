@@ -5,8 +5,13 @@
 
 <ul>
  <li>Single django project can have multiple apps (separating blog section and store as both different apps within one web-site)</li>
- <li></li>
- 
+ <li>Django possess the Object Relational Mapper (ORM) which allows to access database in obejct-oriented way.</li>
+ <li>ORM allows to use different databases like SQLite or PostrgreSQL having no changes to code but accessing data with objects, f.e.:
+  <br>
+  - using SQLite db for development,<br>
+  - using PostgreSQL db for production
+ </li>
+ <li>In ORM, we can represent database structure with classes - they are called MODELS.</li>
 </ul>
 
 <h3>Application features:</h3>
