@@ -38,6 +38,16 @@
 
 <h3>Django setup</h3>
 <ol>
-  <li></li>
-  <li></li>
+  <li>Installing django library in venv:
+   <br>
+   - pip install django
+  </li>
+  <li>Checking django version:
+   <br>
+   - python -m django --version
+  </li>
+  <li>Starting project in project directory:
+   <br>
+   - django-admin startproject project_name
+  </li>
 </ol>
