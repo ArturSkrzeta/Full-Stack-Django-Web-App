@@ -12,6 +12,7 @@
   - using PostgreSQL db for production
  </li>
  <li>In ORM, we can represent database structure with classes - they are called MODELS.</li>
+ <li>Once making migration with <b>python manage.py makemigrations</b>, djabgo converts a class into data schema.</li>
 </ul>
 
 <h3>Application features:</h3>
@@ -68,10 +69,11 @@
    <br>
    - python manage.py startapp blog
   </li>
-  <li>Data migration (first migration will create a database with default tables):
+  <li>Data migration each time when we want to update changes to db (first migration will create a database with default tables):
    <br>
    - python manage.py makemigrations<br>
    - it detects the changes and prepares them to be uploaded to the database
+   - the changes are being saved to migrations directory
   </li>
   <li>Applying changes to db:
    <br>
@@ -81,4 +83,9 @@
    <br>
    - python manage.py createsuperuser
   </li>
+  <li>Checking sql of migrations:
+   <br>
+   - python manage.py sqlmigrate app_name num_of_migration<br>
+   - it shows how model class was interpreted into sql statement
+  </li> 
 </ol>
