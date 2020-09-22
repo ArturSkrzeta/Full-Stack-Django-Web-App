@@ -3,6 +3,11 @@
 <h3>Intro</h3>
 <p>The application for requests/tickets/tasks management raised from the need of ecsaping from shared excel files where the risk of getting things messy is very very high. That affects the data quality which has enormous imapct on further reporting and the analysis.</p>
 
+<ul>
+ <li>Single django project can have multiple apps (separating blog section and store as both different apps within one web-site)</li>
+ <li></li>
+ 
+</ul>
 
 <h3>Application features:</h3>
 <ul>
@@ -49,5 +54,26 @@
   <li>Starting project in project directory:
    <br>
    - django-admin startproject project_name
+  </li>
+  <li>Running django projects server:
+   <br>
+   - python manage.py runserver
+  </li>
+  <li>Creating app:
+   <br>
+   - python manage.py startapp blog
+  </li>
+  <li>Data migration (first migration will create a database with default tables):
+   <br>
+   - python manage.py makemigrations<br>
+   - it detects the changes and prepares them to be uploaded to the database
+  </li>
+  <li>Applying changes to db:
+   <br>
+   - python manage.py migrate
+  </li>
+  <li>Creating superuser:
+   <br>
+   - python manage.py createsuperuser
   </li>
 </ol>
