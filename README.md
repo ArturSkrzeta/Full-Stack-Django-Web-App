@@ -13,6 +13,7 @@
  </li>
  <li>In ORM, we can represent database structure with classes - they are called MODELS.</li>
  <li>Once making migration with <b>python manage.py makemigrations</b>, djabgo converts a class into data schema.</li>
+ <li>ORM lets us to query the database through the model classes.</li>
 </ul>
 
 <h3>Application features:</h3>
@@ -87,5 +88,9 @@
    <br>
    - python manage.py sqlmigrate app_name num_of_migration<br>
    - it shows how model class was interpreted into sql statement
-  </li> 
+  </li>
+  <li>Working with models interactivley in django shell
+   <br>
+   - python manage.py shell
+  </li>
 </ol>
