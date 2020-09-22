@@ -1,7 +1,7 @@
 <h2>Django Full Stack Web Application</h2>
 <h3>Intro</h3>
 <p>The application for requests/tickets/tasks management raised from the need of ecsaping from shared excel files where the risk of getting things messy is very very high. That affects the data quality which has enormous imapct on further reporting and the analysis.</p>
-<p>Application features:</p>
+<h3>Application features:</h3>
 <ul>
  <li>Object oriented database.</li>
  <li>Post forms data validation.</li>
@@ -9,8 +9,11 @@
  <li>User profile panel for info updates.</li>
  <li>Access security system.</li>
  <li>Page content filtering.</li>
+ <br>
+ <img src="images/django.gif">
 </ul>
-<img src="images/django.gif">
+
+
 <h3>Demo</h3>
 <p>First entry site look.</p>
 <img src="images/pr_system.JPG">
