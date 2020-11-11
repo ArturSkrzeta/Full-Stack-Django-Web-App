@@ -50,6 +50,7 @@
 										<h3>Intro</h3>
 										<p>The application for requests/tickets/tasks management raised from the need of ecsaping from shared excel files where the risk of getting things messy is very very high.
 											That affects the data quality which has enormous imapct on further reporting and the analysis.</p>
+											<h5>Applications</h5>
 											<ul>
 												<li>Single django project can have multiple applications.</li>
 												<li>This django project contains two applications:
@@ -57,6 +58,26 @@
 													- application for registering and logging users into the system,<br>
 													- application for adding, updating, removing purchase requests.<br>
 												</li>
+												<li>All installed apps have to be included in mian project setting.py file:
+													<br>
+													<code>
+													INSTALLED_APPS = [<br>
+													  &nbsp&nbsp&nbsp'users.apps.UsersConfig',<br>
+													  &nbsp&nbsp&nbsp'prs.apps.PrsConfig',<br>
+													  &nbsp&nbsp&nbsp'crispy_forms',<br>
+													  &nbsp&nbsp&nbsp'django.contrib.admin',<br>
+													  &nbsp&nbsp&nbsp'django.contrib.auth',<br>
+													  &nbsp&nbsp&nbsp'django.contrib.contenttypes',<br>
+													  &nbsp&nbsp&nbsp'django.contrib.sessions',<br>
+													  &nbsp&nbsp&nbsp'django.contrib.messages',<br>
+													  &nbsp&nbsp&nbsp'django.contrib.staticfiles',<br>
+													]
+													</code>
+												</li>
+											</ul>
+
+											<h5>Object Relational Mapper</h5>
+											<ul>
 												<li>Django has the Object Relational Mapper (ORM) which allows to access database in obejct-oriented way.</li>
 												<li>ORM allows to use different databases like SQLite or PostrgreSQL having no changes to code but accessing database with objects, f.e.:
 														<br>
@@ -64,7 +85,7 @@
 														- using PostgreSQL db for production
 												</li>
 												<li>In ORM, we can represent database structure with classes - they are called MODELS.</li>
-												<li>Once making migration with python manage.py makemigrations, djabgo converts a class into data schema.</li>
+												<li>Once making migration with python manage.py makemigrations, django converts a class into data schema.</li>
 												<li>ORM lets us to query the database through the model classes.</li>
 											<ul>
 									</header>
