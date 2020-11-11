@@ -115,11 +115,32 @@
 
 											<h5>Workflow:</h5>
 											<ul>
-												<li>User hits the web address with a specified endpoint, e.g. www.web-page.com/endpoint</li>
+												<li>User hits the web address with a specified endpoint, e.g. www.web-page.com/my_endpoint</li>
 												<li>Django goes to main web-server urls.py searching for a given endpoint.</li>
-												<li>Due to instructions in web-server urls.py endpoint is being redirected to a specified application.</li>
-												<li>The same endpoint follows instruction in application urls.py where is mapped with a specific function.</li>
-												<li>Application endpoint calls that function from an application views.py.</li>
+												<li>Due to instructions in web-server urls.py endpoint is being redirected to my_application urls.py.
+													<br>
+													<code>
+														urlpatterns = [<br>&nbsp&nbsp&nbsp
+															path('my_endpoint', include(my_application.urls))<br>&nbsp&nbsp&nbsp
+														]
+													</code>
+												</li>
+												<li>The same endpoint follows instruction in application urls.py where is mapped with a specific function.
+													<br>
+													<code>
+														from .views import main<br>&nbsp&nbsp&nbsp
+														urlpatterns = [<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+															path('my_endpoint', main)<br>&nbsp&nbsp&nbsp
+														]
+													</code>
+												</li>
+												<li>Application endpoint calls function 'main' from an application's views.py.
+													<br>
+													<code>
+														def main(request):<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+															return HttpResponse("&lt;h1&gt;Hello World&lt;/h1&gt;")
+													</code>
+												</li>
 												<li>Called function accepts request from endpoint and returns response (JSON, HTML).</li>
 											</ul>
 
