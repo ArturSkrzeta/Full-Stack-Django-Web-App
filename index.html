@@ -63,10 +63,11 @@
 													<b>- migrations</b> - migrating model changes to database,<br>
 													<b>- _init_.py</b> - making python package,<br>
 													<b>- admin.py</b> - keeping admin instance,<br>
-													<b>- apps.py</b> - keeping app class for a project reference,<br>
+													<b>- apps.py</b> - keeping app class for a projectc reference,<br>
 													<b>- models.py</b> - storing database models,<br>
 													<b>- test.py</b> - testing views or models,<br>
-													<b>- views.py</b> - rendering views and API endpoints.<br>
+													<b>- views.py</b> - metohds returning response to user,<br>
+													<b>- url.py</b> - keeps endpoints diretcign to methods in viwes.<br>
 												</li>
 												<li>All installed apps have to be included in mian project setting.py file:
 													<br>
@@ -100,7 +101,27 @@
 													<code>python manage.py makemigrations</code>
 												</li>
 												<li>ORM lets us to query the database through the model classes.</li>
+											</ul>
+
+											<h5>Terminology:</h5>
 											<ul>
+												<li><b>Endpoints</b> - allocation of the web-server that you indicate you want to go to:
+													<br>&nbsp&nbsp&nbsp
+													www.web-page.com/<b>endpoint</b>
+													<br>&nbsp&nbsp&nbsp
+													incoming request --> endopoint of web-server --> response (JSON, HTML)
+												</li>
+											</ul>
+
+											<h5>Workflow:</h5>
+											<ul>
+												<li>User hits the web address with a specified endpoint.</li>
+												<li>Django goes to main web-server urls.py searching for a given endpoint.</li>
+												<li>Endpoint redirects to a specific application where and becomes application endpoint.</li>
+												<li>Application endpoint calls function in application views.py.</li>
+												<li>Called function accepts request from endpoint and returs response (JSON, HTML)</li>
+											</ul>
+
 									</header>
 								</div>
 							</section>
