@@ -52,8 +52,8 @@
 											That affects the data quality which has enormous imapct on further reporting and the analysis.</p>
 											<h5>Applications</h5>
 											<ul>
-												<li>Single django project can have multiple applications for single responsibility.</li>
-												<li>This django project contains two applications:
+												<li>Single Django project can have multiple applications for single responsibility.</li>
+												<li>My Django project contains two applications:
 													<br>
 													- application for registering and logging users into the system,<br>
 													- application for adding, updating, removing purchase requests.<br>
@@ -146,47 +146,47 @@
 									<h3>Setup</h3>
 									<ol>
 									  <li>Installing django library in venv:
-									   <br>
-									   - pip install django
+									   <br>&nbsp&nbsp&nbsp
+									   <code>pip install django</code>
 									  </li>
 									  <li>Checking django version:
-									   <br>
-									   - python -m django --version
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python -m django --version</code>
 									  </li>
 									  <li>Starting project in project directory:
-									   <br>
-									   - django-admin startproject project_name
+									   <br>&nbsp&nbsp&nbsp
+									   <code>django-admin startproject project_name</code>
 									  </li>
 									  <li>Running django projects server:
-									   <br>
-									   - python manage.py runserver
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python manage.py runserver</code>
 									  </li>
 									  <li>Creating app:
-									   <br>
-									   - python manage.py startapp blog
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python manage.py startapp blog</code>
 									  </li>
 									  <li>Data migration each time when we want to update changes to db (first migration will create a database with default tables):
-									   <br>
-									   - python manage.py makemigrations<br>
-									   - it detects the changes and prepares them to be uploaded to the database
-									   - the changes are being saved to migrations directory
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python manage.py makemigrations</code><br>&nbsp&nbsp&nbsp&nbsp
+									   it detects the changes and prepares them to be uploaded to the database<br>&nbsp&nbsp&nbsp&nbsp
+									   the changes are being saved to migrations directory
 									  </li>
 									  <li>Applying changes to db:
-									   <br>
-									   - python manage.py migrate
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python manage.py migrate</code>
 									  </li>
 									  <li>Creating superuser:
-									   <br>
-									   - python manage.py createsuperuser
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python manage.py createsuperuser</code>
 									  </li>
 									  <li>Checking sql of migrations:
-									   <br>
-									   - python manage.py sqlmigrate app_name num_of_migration<br>
-									   - it shows how model class was interpreted into sql statement
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python manage.py sqlmigrate app_name num_of_migration</code><br>&nbsp&nbsp&nbsp&nbsp
+									   it shows how model class was interpreted into sql statement
 									  </li>
 									  <li>Working with models interactivley in django shell
-									   <br>
-									   - python manage.py shell
+									   <br>&nbsp&nbsp&nbsp
+									   <code>python manage.py shell</code>
 									  </li>
 									</ol>
 								</div>
