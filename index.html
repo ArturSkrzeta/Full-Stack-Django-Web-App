@@ -111,26 +111,33 @@
 													<br>&nbsp&nbsp&nbsp
 													incoming request --> endopoint of web-server --> response (JSON, HTML)
 												</li>
+												<li><b>Model</b> - Python class that, with its attributes, reflects database schema:<br>
+													- when you create a table in a relational db, you create a model in Django,<br>
+													- models in Django are Python classes,<br>
+													- class attributes reflects table fields,<br>
+													- this way Djagno allows write Python code and it interprets it and automatically performs all the db operation for us.
+												</li>
 											</ul>
 
 											<h5>Workflow:</h5>
 											<ul>
-												<li>User hits the web address with a specified endpoint, e.g. www.web-page.com/my_endpoint</li>
-												<li>Django goes to main web-server urls.py searching for a given endpoint.</li>
-												<li>Due to instructions in web-server urls.py endpoint is being redirected to my_application urls.py.
+												<li>User hits the web address with a specified endpoint, e.g. wwscw.web-page.com/<span style="color:#1cda7a;">api/</span><span style="color:red;">my_endpoint</span>.</li>
+												<li>Note that provided endpoint has two parts: <span style="color:#1cda7a;">api/</span> and <span style="color:red;">my_endpoint</span>.</li>
+												<li>Django goes to main web-server urls.py searching for a <span style="color:#1cda7a;">api/</span> endpoint.
 													<br>
 													<code>
 														urlpatterns = [<br>&nbsp&nbsp&nbsp
-															path('my_endpoint', include(my_application.urls))<br>&nbsp&nbsp&nbsp
+															path('<span style="color:#1cda7a;">api/</span>', include(my_application.urls))<br>&nbsp&nbsp&nbsp
 														]
 													</code>
 												</li>
-												<li>The same endpoint follows instruction in application urls.py where is mapped with a specific function.
+												<li>Due to instructions in web-server urls.py endpoint <span style="color:red;">my_endpoint</span> is being redirected to my_application urls.py.</li>
+												<li>The endpoint <span style="color:red;">my_endpoint</span> follows instruction in application urls.py where is mapped with a specific function.
 													<br>
 													<code>
 														from .views import main<br>&nbsp&nbsp&nbsp
 														urlpatterns = [<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-															path('my_endpoint', main)<br>&nbsp&nbsp&nbsp
+															path('<span style="color:red;">my_endpoint</span>', main)<br>&nbsp&nbsp&nbsp
 														]
 													</code>
 												</li>
@@ -141,7 +148,8 @@
 															return HttpResponse("&lt;h1&gt;Hello World&lt;/h1&gt;")
 													</code>
 												</li>
-												<li>Called function accepts request from endpoint and returns response (JSON, HTML).</li>
+												<li>Called function accepts request from endpoint and returns HTML response.</li>
+												<li>Hitting endpoint: www.web-page.com/api/my_endpoint results with html &lt;h1&gt;Hello World&lt;/h1&gt; being displayed.</li>
 											</ul>
 
 									</header>
