@@ -126,8 +126,9 @@
 												<li>Django goes to main web-server urls.py searching for a <span style="color:#1cda7a;">api/</span> endpoint.
 													<br>
 													<code>
+														from django.urls import path, include<br>
 														urlpatterns = [<br>&nbsp&nbsp&nbsp
-															path('<span style="color:#1cda7a;">api/</span>', include(my_application.urls))<br>&nbsp&nbsp&nbsp
+															path('<span style="color:#1cda7a;">api/</span>', include('my_application.urls'))<br>&nbsp&nbsp&nbsp
 														]
 													</code>
 												</li>
@@ -135,7 +136,8 @@
 												<li>The endpoint <span style="color:red;">my_endpoint</span> follows instruction in application urls.py where is mapped with a specific function.
 													<br>
 													<code>
-														from .views import main<br>&nbsp&nbsp&nbsp
+														from django.urls import path<br>
+														from .views import main<br>
 														urlpatterns = [<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 															path('<span style="color:red;">my_endpoint</span>', main)<br>&nbsp&nbsp&nbsp
 														]
@@ -143,6 +145,7 @@
 												</li>
 												<li>Application endpoint calls function 'main' from an application's views.py.
 													<br>
+													<code>from django.http import HttpResponse</code><br>
 													<code>def main(request):</code><br>&nbsp&nbsp&nbsp
 													<code>return HttpResponse("&lt;h1&gt;Hello World&lt;/h1&gt;")</code>
 												</li>
