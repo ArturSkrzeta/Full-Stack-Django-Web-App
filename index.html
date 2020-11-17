@@ -123,7 +123,7 @@
 											<ul>
 												<li>User hits the web address with a specified endpoint, e.g. www.web-page.com/<span style="color:#1cda7a;">api/</span><span style="color:red;">my_endpoint</span>.</li>
 												<li>Note that provided endpoint has two parts: <span style="color:#1cda7a;">api/</span> and <span style="color:red;">my_endpoint</span>.</li>
-												<li>Django goes to main web-server urls.py searching for a <span style="color:#1cda7a;">api/</span> endpoint.
+												<li>Django goes to main web-service urls.py searching for a <span style="color:#1cda7a;">api/</span> endpoint.
 													<br>
 													<code>
 														from django.urls import path, include<br>
@@ -132,7 +132,7 @@
 														]
 													</code>
 												</li>
-												<li>Due to instructions in web-server urls.py endpoint <span style="color:red;">my_endpoint</span> is being redirected to my_application urls.py.</li>
+												<li>Due to instructions in urls.py endpoint <span style="color:red;">my_endpoint</span> is being redirected to my_application urls.py.</li>
 												<li>The endpoint <span style="color:red;">my_endpoint</span> follows instruction in application urls.py where is mapped with a specific function.
 													<br>
 													<code>
