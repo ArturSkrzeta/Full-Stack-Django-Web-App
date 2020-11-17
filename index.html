@@ -125,23 +125,19 @@
 												<li>Note that provided endpoint has two parts: <span style="color:#1cda7a;">api/</span> and <span style="color:red;">my_endpoint</span>.</li>
 												<li>Django goes to main web-service urls.py searching for a <span style="color:#1cda7a;">api/</span> endpoint.
 													<br>
-													<code>
-														from django.urls import path, include<br>
-														urlpatterns = [<br>&nbsp&nbsp&nbsp
-															path('<span style="color:#1cda7a;">api/</span>', include('my_application.urls'))<br>&nbsp&nbsp&nbsp
-														]
-													</code>
+													<code>from django.urls import path, include</code><br>
+													<code>urlpatterns = [</code><br>&nbsp&nbsp&nbsp
+													<code>path('<span style="color:#1cda7a;">api/</span>', include('my_application.urls'))</code><br>
+													<code>]</code>
 												</li>
 												<li>Due to instructions in urls.py endpoint <span style="color:red;">my_endpoint</span> is being redirected to my_application urls.py.</li>
 												<li>The endpoint <span style="color:red;">my_endpoint</span> follows instruction in application urls.py where is mapped with a specific function.
 													<br>
-													<code>
-														from django.urls import path<br>
-														from .views import main<br>
-														urlpatterns = [<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-															path('<span style="color:red;">my_endpoint</span>', main)<br>&nbsp&nbsp&nbsp
-														]
-													</code>
+													<code>from django.urls import path</code><br>
+													<code>from .views import main</code><br>
+													<code>urlpatterns = [</code><br>&nbsp&nbsp&nbsp
+													<code>path('<span style="color:red;">my_endpoint</span>', main)</code><br>
+													<code>]</code>
 												</li>
 												<li>Application endpoint calls function 'main' from an application's views.py.
 													<br>
