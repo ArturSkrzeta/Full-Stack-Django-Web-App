@@ -54,34 +54,34 @@
 											<ul>
 												<li>Single Django project can have multiple applications for single responsibility.</li>
 												<li>My Django project contains two applications:
-													<br>
-													- application for registering and logging users into the system,<br>
-													- application for adding, updating, removing purchase requests.<br>
+													<br />
+													- application for registering and logging users into the system,<br />
+													- application for adding, updating, removing purchase requests.<br />
 												</li>
 												<li>Application package contains:
-													<br>
-													<b>- migrations</b> - migrating model changes to database,<br>
-													<b>- _init_.py</b> - making python package,<br>
-													<b>- admin.py</b> - keeping admin instance,<br>
-													<b>- apps.py</b> - keeping app class for a projectc reference,<br>
-													<b>- models.py</b> - storing database models,<br>
-													<b>- test.py</b> - testing views or models,<br>
-													<b>- views.py</b> - metohds returning response to user,<br>
-													<b>- url.py</b> - keeps endpoints diretcign to methods in viwes.<br>
+													<br />
+													<b>- migrations</b> - migrating model changes to database,<br />
+													<b>- _init_.py</b> - making python package,<br />
+													<b>- admin.py</b> - keeping admin instance,<br />
+													<b>- apps.py</b> - keeping app class for a projectc reference,<br />
+													<b>- models.py</b> - storing database models,<br />
+													<b>- test.py</b> - testing views or models,<br />
+													<b>- views.py</b> - metohds returning response to user,<br />
+													<b>- url.py</b> - keeps endpoints diretcign to methods in viwes.<br />
 												</li>
 												<li>All installed apps have to be included in mian project setting.py file:
-													<br>
+													<br />
 													<code>
-													INSTALLED_APPS = [<br>
-													  &nbsp&nbsp&nbsp'users.apps.UsersConfig',<br>
-													  &nbsp&nbsp&nbsp'prs.apps.PrsConfig',<br>
-													  &nbsp&nbsp&nbsp'crispy_forms',<br>
-													  &nbsp&nbsp&nbsp'django.contrib.admin',<br>
-													  &nbsp&nbsp&nbsp'django.contrib.auth',<br>
-													  &nbsp&nbsp&nbsp'django.contrib.contenttypes',<br>
-													  &nbsp&nbsp&nbsp'django.contrib.sessions',<br>
-													  &nbsp&nbsp&nbsp'django.contrib.messages',<br>
-													  &nbsp&nbsp&nbsp'django.contrib.staticfiles',<br>
+													INSTALLED_APPS = [<br />
+													  &nbsp&nbsp&nbsp'users.apps.UsersConfig',<br />
+													  &nbsp&nbsp&nbsp'prs.apps.PrsConfig',<br />
+													  &nbsp&nbsp&nbsp'crispy_forms',<br />
+													  &nbsp&nbsp&nbsp'django.contrib.admin',<br />
+													  &nbsp&nbsp&nbsp'django.contrib.auth',<br />
+													  &nbsp&nbsp&nbsp'django.contrib.contenttypes',<br />
+													  &nbsp&nbsp&nbsp'django.contrib.sessions',<br />
+													  &nbsp&nbsp&nbsp'django.contrib.messages',<br />
+													  &nbsp&nbsp&nbsp'django.contrib.staticfiles',<br />
 													]
 													</code>
 												</li>
@@ -91,13 +91,13 @@
 											<ul>
 												<li>Django has ORM which allows to access database in obejct-oriented way.</li>
 												<li>ORM allows to use different databases like SQLite or PostrgreSQL having no changes to code but accessing database with objects, f.e.:
-														<br>
-														- using SQLite db for development,<br>
+														<br />
+														- using SQLite db for development,<br />
 														- using PostgreSQL db for production.
 												</li>
 												<li>In ORM, we can represent database structure with classes - they are called <b>MODELS</b>.</li>
 												<li>Django converts a class into a data schema with command:
-													<br>&nbsp&nbsp&nbsp
+													<br />&nbsp&nbsp&nbsp
 													<code>python manage.py makemigrations</code>
 												</li>
 												<li>ORM lets us to query the database through the model classes.</li>
@@ -106,15 +106,15 @@
 											<h5>Terminology:</h5>
 											<ul>
 												<li><b>Endpoints</b> - allocation of the web-server that you indicate you want to go to:
-													<br>&nbsp&nbsp&nbsp
+													<br />&nbsp&nbsp&nbsp
 													www.web-page.com/<b>endpoint</b>
-													<br>&nbsp&nbsp&nbsp
+													<br />&nbsp&nbsp&nbsp
 													incoming request --> endopoint of web-server --> response (JSON, HTML)
 												</li>
-												<li><b>Model</b> - Python class that, with its attributes, reflects database schema:<br>
-													- when you create a table in a relational db, you create a model in Django,<br>
-													- models in Django are Python classes,<br>
-													- class attributes reflects table fields,<br>
+												<li><b>Model</b> - Python class that, with its attributes, reflects database schema:<br />
+													- when you create a table in a relational db, you create a model in Django,<br />
+													- models in Django are Python classes,<br />
+													- class attributes reflects table fields,<br />
 													- this way Djagno allows write Python code and it interprets it and automatically performs all the db operation for us.
 												</li>
 											</ul>
@@ -124,25 +124,25 @@
 												<li>User hits the web address with a specified endpoint, e.g. www.web-page.com/<span style="color:#1cda7a;">api/</span><span style="color:red;">my_endpoint</span>.</li>
 												<li>Note that provided endpoint has two parts: <span style="color:#1cda7a;">api/</span> and <span style="color:red;">my_endpoint</span>.</li>
 												<li>Django goes to main web-service urls.py searching for a <span style="color:#1cda7a;">api/</span> endpoint.
-													<br>
-													<code>from django.urls import path, include</code><br>
-													<code>urlpatterns = [</code><br>&nbsp&nbsp&nbsp
-													<code>path('<span style="color:#1cda7a;">api/</span>', include('my_application.urls'))</code><br>
+													<br />
+													<code>from django.urls import path, include</code><br />
+													<code>urlpatterns = [</code><br />&nbsp&nbsp&nbsp
+													<code>path('<span style="color:#1cda7a;">api/</span>', include('my_application.urls'))</code><br />
 													<code>]</code>
 												</li>
 												<li>Due to instructions in urls.py endpoint <span style="color:red;">my_endpoint</span> is being redirected to my_application urls.py.</li>
 												<li>The endpoint <span style="color:red;">my_endpoint</span> follows instruction in application urls.py where is mapped with a specific function.
-													<br>
-													<code>from django.urls import path</code><br>
-													<code>from .views import main</code><br>
-													<code>urlpatterns = [</code><br>&nbsp&nbsp&nbsp
-													<code>path('<span style="color:red;">my_endpoint</span>', main)</code><br>
+													<br />
+													<code>from django.urls import path</code><br />
+													<code>from .views import main</code><br />
+													<code>urlpatterns = [</code><br />&nbsp&nbsp&nbsp
+													<code>path('<span style="color:red;">my_endpoint</span>', main)</code><br />
 													<code>]</code>
 												</li>
 												<li>Application endpoint calls function 'main' from an application's views.py.
-													<br>
-													<code>from django.http import HttpResponse</code><br>
-													<code>def main(request):</code><br>&nbsp&nbsp&nbsp
+													<br />
+													<code>from django.http import HttpResponse</code><br />
+													<code>def main(request):</code><br />&nbsp&nbsp&nbsp
 													<code>return HttpResponse("&lt;h1&gt;Hello World&lt;/h1&gt;")</code>
 												</li>
 												<li>Called function accepts request from endpoint and returns HTML response.</li>
@@ -204,46 +204,46 @@
 									<h3>Setup</h3>
 									<ol>
 									  <li>Installing django library in venv:
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>pip install django</code>
 									  </li>
 									  <li>Checking django version:
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>python -m django --version</code>
 									  </li>
 									  <li>Starting project in project directory:
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>django-admin startproject project_name</code>
 									  </li>
 									  <li>Running django projects server:
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>python manage.py runserver</code>
 									  </li>
 									  <li>Creating app:
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>python manage.py startapp blog</code>
 									  </li>
 									  <li>Data migration each time when we want to update changes to db (first migration will create a database with default tables):
-									   <br>&nbsp&nbsp&nbsp
-									   <code>python manage.py makemigrations</code><br>&nbsp&nbsp&nbsp&nbsp
-									   it detects the changes and prepares them to be uploaded to the database<br>&nbsp&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
+									   <code>python manage.py makemigrations</code><br />&nbsp&nbsp&nbsp&nbsp
+									   it detects the changes and prepares them to be uploaded to the database<br />&nbsp&nbsp&nbsp&nbsp
 									   the changes are being saved to migrations directory
 									  </li>
 									  <li>Applying changes to db:
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>python manage.py migrate</code>
 									  </li>
 									  <li>Creating superuser:
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>python manage.py createsuperuser</code>
 									  </li>
 									  <li>Checking sql of migrations:
-									   <br>&nbsp&nbsp&nbsp
-									   <code>python manage.py sqlmigrate app_name num_of_migration</code><br>&nbsp&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
+									   <code>python manage.py sqlmigrate app_name num_of_migration</code><br />&nbsp&nbsp&nbsp&nbsp
 									   it shows how model class was interpreted into sql statement
 									  </li>
 									  <li>Working with models interactivley in django shell
-									   <br>&nbsp&nbsp&nbsp
+									   <br />&nbsp&nbsp&nbsp
 									   <code>python manage.py shell</code>
 									  </li>
 									</ol>
